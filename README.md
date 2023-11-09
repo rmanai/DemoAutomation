@@ -1,2 +1,2 @@
 # DemoAutomation
-Un projet de test automtisés avec selenium / Java / cucumber
+Un projet de tests automtisés avec selenium / Java / cucumber
