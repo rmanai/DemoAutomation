@@ -5,8 +5,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.DemoAutomationTesting.e2eTests.authentication.models.AuthenticationModel;
 
-
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -16,13 +14,15 @@ public class AuthenticationStepDefinitions {
 
 	public WebDriver driver;
 	
-	 private	AuthenticationModel loginpage =  PageFactory.initElements(driver,  AuthenticationModel.class); 
+	 private	AuthenticationModel loginPage =  PageFactory.initElements(driver,  AuthenticationModel.class); 
 	
 	
 	@Given("^Navigate to Gmail login page$")
 	public void navigateToGmailLoginPage() throws Throwable {
 		
-	    throw new PendingException();
+		loginPage.enterLoginPage();
+		
+	  //  throw new PendingException();
 	}
 
 	@When("^the user enter Login in username field$")
@@ -30,33 +30,33 @@ public class AuthenticationStepDefinitions {
 		
 	
 		
-		loginpage.fillUserName();
-		loginpage.clickLoginButton();
+		loginPage.fillUserName();
+		loginPage.clickLoginButton();
 	
-	    throw new PendingException();
+		//   throw new PendingException();
 	}
 
 	@When("^the user enter Password in password field$")
 	public void theUserEnterPasswordInPasswordField() throws Throwable {
-		loginpage.fillPassword();
+		loginPage.fillPassword();
 	
-	    throw new PendingException();
+		//   throw new PendingException();
 	}
 
 	@When("^the user clicks on connection button$")
 	public void theUserClicksOnConnectionButton() throws Throwable {
 	 
-		loginpage.clickLoginButton();
+		loginPage.clickLoginButton();
 		
-	    throw new PendingException();
+		//  throw new PendingException();
 	}
 
 	@Then("^the user is redirected to home page$")
 	public void theUserIsRedirectedToHomePage() throws Throwable {
 		
-		loginpage.isConnectedToGmailAccount(); 
+		loginPage.isConnectedToGmailAccount(); 
 	   
-	    throw new PendingException();
+		//   throw new PendingException();
 	}
 
 }

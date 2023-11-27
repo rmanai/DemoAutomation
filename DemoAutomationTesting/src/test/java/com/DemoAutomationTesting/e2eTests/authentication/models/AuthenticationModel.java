@@ -29,7 +29,7 @@ public class AuthenticationModel {
 	
 /*Methods*/
 	
-	public boolean enterLoginPage() {
+	public  boolean enterLoginPage() {
 		return AuthenticationPage.login_page.isDisplayed();
 		
 		
